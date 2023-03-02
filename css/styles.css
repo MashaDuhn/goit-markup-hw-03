@@ -29,6 +29,8 @@ ul {
 
 img {
     display: block;
+    min-width: 100%;
+    height: auto;
 }
 
 body {
@@ -37,10 +39,14 @@ body {
 }
 
 .container {
-    width: 1158px;
+    max-width: 1158px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.section {
+    padding: 120px 0;
 }
 
 .list {
@@ -68,11 +74,14 @@ body {
 
 .header {
     padding: 24px 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E7E9FC;
 }
 
 .header-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header-navigation {
@@ -116,9 +125,7 @@ body {
 }
 
 
-.address {
-    margin-left: auto;
-}
+.address {}
 
 
 .header-list-address {
@@ -152,16 +159,16 @@ body {
 .hero {
     padding: 120px 0;
     background: var(--bakground-accent-color);
-    background-color: grey;
-    padding: 188px 0 292px;
+    background-color: var(--main-color);
+    padding: 188px 0;
     text-align: center;
 
 }
 
 .hero-title {
-    font-weight: 700;
+    max-width: 496px;
+    margin: 0 auto 48px;
     font-size: 56px;
-    margin-bottom: 48px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: var(--secondary-title-color);
@@ -177,17 +184,21 @@ body {
     letter-spacing: 0.04em;
     color: var(--secondary-title-color);
     cursor: pointer;
-    background: var(--accent-color)
+    background: var(--accent-color);
+    padding: 16px 32px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+    border-radius: 4px;
 }
 
 /*--------------Section company values-------------------  */
 
 .aside {
-    padding: 120px 0;
+    padding-bottom: 0;
 }
 
 .aside-title {
-    width: calc((100%-72px)/4);
+    width: calc((100% - 72px)/4);
 }
 
 .aside-list {
@@ -219,7 +230,7 @@ body {
 /*--------------Section doing WebStudia-------------------  */
 
 .content {
-    padding: 120px 0;
+    padding-bottom: 120px;
 }
 
 .content-title {
@@ -239,13 +250,13 @@ body {
 }
 
 .content-item {
-    width: calc((100%-48px)/3);
+    width: calc((100% - 48px)/3);
 }
 
 /*--------------Section Team-------------------  */
 
 .team {
-    padding: 120px 0;
+    padding-bottom: 120px;
     background-color: var(--footer-logo-color);
 }
 
@@ -263,11 +274,15 @@ body {
 .team-list {
     display: flex;
     gap: var(--main-gap);
+    flex-wrap: wrap;
 }
 
 .team-item {
     background-color: var(--secondary-title-color);
-    width: calc((100%-72px)/4);
+    width: calc((100% - 72px) /4);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
+
 }
 
 .team-subtitle {
@@ -296,16 +311,13 @@ body {
 
 /*--------------Section Services-------------------  */
 .services {
-    padding: 96px 0 72px;
-
+    margin: 96px 0 0;
 }
 
 .services-list {
     display: flex;
     gap: var(--main-gap);
     justify-content: center;
-
-
 }
 
 .services-item {}
@@ -320,13 +332,28 @@ body {
     align-items: center;
     text-align: center;
     letter-spacing: 0.04em;
+    padding: 12px 24px;
     color: var(--accent-color);
     cursor: pointer;
+    background: var(--footer-logo-color);
+    border: 1px solid #E7E9FC;
+    border-radius: 4px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.services-btn:hover,
+.services-btn:focus {
+    background-color: var(--secondary-accent-color);
+    color: var(--secondary-title-color);
 }
 
 /*--------------Section Examples-------------------  */
 
-.examples {}
+.examples {
+    margin: 72px 0 120px;
+}
 
 .exsamples-list {
     display: flex;
@@ -339,6 +366,10 @@ body {
 
 .examples-item {
     box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #E7E9FC;
+    width: calc((100% - 48px) /3);
+
 
 }
 
@@ -365,7 +396,7 @@ body {
 /*--------------Footer-------------------  */
 
 .footer {
-
+    padding: 100px 0;
     background: var(--main-color);
 }
 
@@ -378,12 +409,10 @@ body {
 }
 
 .header-logo-footer {
-    margin: 120px 0 100px;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
-    display: flex;
-    align-items: center;
+    display: block;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--footer-logo-color);
