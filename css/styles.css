@@ -28,7 +28,7 @@ ul {
 }
 
 img {
-    display: block;
+    display: flex;
     min-width: 100%;
     height: auto;
 }
@@ -200,13 +200,12 @@ body {
     padding-bottom: 0;
 }
 
-.aside-title {
-    flex-basis: calc((100% - 72px) / 4);
-}
+.aside-title {}
 
 .aside-list {
     display: flex;
-    gap: var(--main-gap)
+    gap: var(--main-gap);
+    flex-basis: calc((100% - 72px) / 4);
 }
 
 .aside-item {}
@@ -318,6 +317,7 @@ body {
     gap: var(--main-gap);
     justify-content: center;
     margin-bottom: 72px;
+    flex-basis: calc((100% - 96px) / 5);
 }
 
 .services-item {}
