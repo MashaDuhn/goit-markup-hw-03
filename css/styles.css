@@ -205,10 +205,12 @@ body {
 .aside-list {
     display: flex;
     gap: var(--main-gap);
-    flex-basis: calc((100% - 72px) / 4);
+
 }
 
-.aside-item {}
+.aside-item {
+    flex-basis: calc((100% - 72px) / 4);
+}
 
 .aside-subtitle {
     font-weight: 500;
@@ -248,10 +250,12 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: var(--main-gap);
-    flex-basis: calc((100% - 48px) / 3);
 }
 
-.content-item {}
+.content-item {
+    flex-basis: calc((100% - 48px) / 3);
+
+}
 
 /*--------------Section Team-------------------  */
 
@@ -356,13 +360,12 @@ body {
     flex-wrap: wrap;
     column-gap: var(--main-gap);
     row-gap: 48px;
-    flex-basis: calc((100% - 48px) / 3);
 }
 
 .examples-item {
-    box-sizing: border-box;
     background: #FFFFFF;
     border: 1px solid #E7E9FC;
+    flex-basis: calc((100% - 48px) / 3);
 
 }
 
@@ -383,6 +386,7 @@ body {
 
 .example-content {
     padding: 32px;
+    box-sizing: border-box;
 }
 
 
